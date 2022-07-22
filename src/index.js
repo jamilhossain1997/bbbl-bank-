@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+axios.defaults.baseURL = 'http://127.0.0.1:8000';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+
+      <App />
+
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
